@@ -1,5 +1,10 @@
+//teeny_button();
 //main_button();
 //aux_button();
+
+module teeny_button() {
+  frame(21.2, 29.2, 2.8, 0.8, 0.5, 3, 1.5, 0);
+}
 
 module main_button() {
   frame(24.2, 41.2, 4.4, 1.8, 0.5, 3.3, 1.5, 0);
