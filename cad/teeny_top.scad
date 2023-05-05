@@ -55,10 +55,10 @@ module body() {
 }
 
 module leds() {
-  translate([-54,68]) cube([5,7,4.5],center=true);
-  translate([-32,68]) cube([5,7,4.5],center=true);
-  translate([-10,68]) cube([5,7,4.5],center=true);
-  translate([12,68]) cube([5,7,4.5],center=true);
+  translate([-54,68]) cube([5,7,4.3],center=true);
+  translate([-32,68]) cube([5,7,4.3],center=true);
+  translate([-10,68]) cube([5,7,4.3],center=true);
+  translate([12,68]) cube([5,7,4.3],center=true);
 }
 
 module screw(pos) {
@@ -76,10 +76,10 @@ module main_hole(pos)
 module aux_hole(pos) {
   translate(pos) {
     hull() {
-      rcube(7,8.8,2.5,1);
-      rcube(7,7,4.1,2);
+      rcube(7,8.8,2,1);
+      rcube(6,6,4.1,2);
     }
-    rcube(7,7,6,2);
+    //rcube(6,6,6,1.7);
   }
 }
 
@@ -95,22 +95,28 @@ module usb_hole()
 }
 
 module aux_button(pos) {
-  translate(pos) difference() {
-    hull() {
-      rcube(9,12,1,2);
-      rcube(10.5,13.5,0.1,2.75);
+  translate(pos) {
+    difference() {
+      rcube(11,12.5,0.6,2);
+      translate([0,0,-1]) rcube(9.2,10.7,3,1.7);
     }
-    translate([0,0,-1]) rcube(7.5,10.5,6,2);
+    difference() {
+      rcube(10.4,11.9,1,2);
+      translate([0,0,-1]) rcube(9.8,11.3,3,1.7);
+    }
   }
 }
 
 module set_button(pos) {
-  translate(pos) difference() {
-    hull() {
-      rcube(8.5,8.5,1,2);
-      rcube(10,10,0.1,2.75);
+  translate(pos) {
+    difference() {
+      rcube(10,10,0.6,2);
+      translate([0,0,-1]) rcube(8.2,8.2,3,1.7);
     }
-    translate([0,0,-1]) rcube(7,7,6,2);
+    difference() {
+      rcube(9.4,9.4,1,2);
+      translate([0,0,-1]) rcube(8.8,8.8,3,1.7);
+    }
   }
 }
 
@@ -125,11 +131,11 @@ module buttons() {
     translate([36,36]) teeny_button();
   }
 
-  color ("#2C3E50") translate([0,0,2.9]) {
-    aux_button([-54,65.5]);
-    aux_button([-32,65.5]);
-    aux_button([-10,65.5]);
-    aux_button([12,65.5]);
+  color("#2C3E50") translate([0,0,2.9]) {
+    aux_button([-54,65]);
+    aux_button([-32,65]);
+    aux_button([-10,65]);
+    aux_button([12,65]);
     set_button([43,64]);
     set_button([54,64]);
   }
