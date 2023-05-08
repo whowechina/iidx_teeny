@@ -8,7 +8,7 @@ buttons();
 
 translate([63,47,2.3]) scale([0.3,0.3,0.3]) import("iidx_teeny_logo.stl");
 
-%color("green", 0.8) pcb();
+*%color("green", 0.2) pcb();
 
 module pcb() {
   translate([-137.32,144.4,-1.21]) import("iidx_teeny v1.stl");
@@ -32,8 +32,8 @@ module body() {
 
     // set button holes
     color ("darkgray") translate([0,0,-1]) {
-      aux_hole([43,64]);
-      aux_hole([54,64]);
+      aux_hole([43,64],1.5);
+      aux_hole([54,64],1.5);
       aux_hole([-54,64]);
       aux_hole([-32,64]);
       aux_hole([-10,64]);
@@ -73,11 +73,11 @@ module main_hole(pos)
   translate(pos) cube([21.2,29.2,20],center=true);
 }
 
-module aux_hole(pos) {
+module aux_hole(pos,r=2) {
   translate(pos) {
     hull() {
-      rcube(7,8.8,2,1);
-      rcube(6,6,4.1,2);
+      rcube(8.8,8.8,2,1);
+      rcube(6.3,6.3,4.1,r);
     }
     //rcube(6,6,6,1.7);
   }
