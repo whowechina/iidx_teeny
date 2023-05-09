@@ -3,7 +3,7 @@ hinge_right=false;
 
 body();
 
-%color("green", 0.4) pcb();
+%color("green", 0.3) pcb();
 
 module pcb() {
   translate([-137.32,144.4,5]) import("iidx_teeny v1.stl");
@@ -15,7 +15,7 @@ module body() {
     color("darkgray") translate([0,25,5]) rcube(150.3,100.3,10,5.15);
 
     // main button
-    color("red") translate([0,0,2]) {
+    color("red") translate([0,0,1.5]) {
       main_button_hole([-54,0]);
       main_button_hole([-18,0]);
       main_button_hole([18,0]);
@@ -43,9 +43,10 @@ module body() {
       translate([16,35]) rcube(10,32,10,1);
     }
     
-    // pi pico area holes
-    color("navy") translate([0,0,1.5]) {
+    // pi pico area
+    color("cyan") translate([0,0,1.5]) {
       translate([-39,57,0]) rcube(55,25,10,1);
+      translate([-17,57,-0.7]) rcube(11,12,10,1);
       translate([-26.5,53.5,-3]) cylinder(d=3,h=10,$fn=32); // reset button
     }
 
@@ -65,7 +66,8 @@ module body() {
     // TT hinge junction
     if (hinge_left) color("gray") {
       translate([-65,20,1]) rcube(5,50,10,1);
-      translate([-75,20,3.2]) rcube(20,45,10,1);
+      translate([-75,20,3.2]) rcube(20,42,10,1);
+      translate([-62,20,1]) rcube(9,42,10,1);
       wire_clamp([-75,19,3]);
     }
     if (hinge_right) color("gray") {
@@ -87,8 +89,8 @@ module wire_clamp(pos) {
 module screw(pos) {
   translate(pos) {
     cylinder(d=3.3,h=10,$fn=24);
-    cylinder(d=6.7,h=4.2,$fn=6);
-    cylinder(d=10,h=2.2);
+    cylinder(d=6.7,h=4,$fn=6);
+    cylinder(d=9.5,h=2,$fn=32);
   }
 }
 
