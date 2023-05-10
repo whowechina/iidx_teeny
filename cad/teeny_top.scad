@@ -97,11 +97,11 @@ module usb_hole()
 module aux_button(pos) {
   translate(pos) {
     difference() {
-      rcube(11,12.5,0.6,2);
-      translate([0,0,-1]) rcube(9.2,10.7,3,1.7);
+      rcube(11,13.5,0.7,2);
+      translate([0,0,-1]) rcube(9.2,11.7,3,1.7);
     }
     difference() {
-      rcube(10.4,11.9,1,2);
+      rcube(10.4,12.9,1.1,2);
       translate([0,0,-1]) rcube(9.8,11.3,3,1.7);
     }
   }
@@ -132,10 +132,10 @@ module buttons() {
   }
 
   color("#2C3E50") translate([0,0,2.9]) {
-    aux_button([-54,65]);
-    aux_button([-32,65]);
-    aux_button([-10,65]);
-    aux_button([12,65]);
+    aux_button([-54,65.5]);
+    aux_button([-32,65.5]);
+    aux_button([-10,65.5]);
+    aux_button([12,65.5]);
     set_button([43,64]);
     set_button([54,64]);
   }
