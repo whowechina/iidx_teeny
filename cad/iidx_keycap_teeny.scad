@@ -1,9 +1,8 @@
-t=10;
-w=22;
+w=20;
 h=28;
 r=1.2;
 solid=1.1;
-zoff=-0.3;
+zoff=-1.6;
 
 gap_r = 0.18; // radius of round corner in cross
 stem_l = 4.85; // socket stem length
@@ -12,14 +11,12 @@ stem_d = 5.6; // socket stem diameter
 translate([0,0,0]) {
   cap();
   *stems(); // Choc V1, SLA
-  stems(v1=false); // Choc V2, SLA/FDM
+  stems(v1=true); // Choc V2, SLA/FDM
 }
 
 %union() {
-  mark([0,2.3,0],3.3,"purple");
-  mark([0,12,0],3.7,"orange");
-  mark([1,10,0],0.8,"cyan");
-  mark([0,0,0],6.6,"red");
+  mark([2.5,0.3,0],2.1,"purple");
+  mark([0,0,0],6.1,"red");
 }
 
 module mark(offset=[0,0,0],h=5.5,c="red") {
@@ -35,7 +32,7 @@ module mark(offset=[0,0,0],h=5.5,c="red") {
 module stems(v1=true,sla=true) {
   if (v1) {
     // choc v1
-    translate([0,0,1.4]) rotate([0,0,90]) color("cyan") {
+    translate([0,0,1.8]) rotate([0,0,90]) color("cyan") {
       choc_stem([0,2.85,0],4.5);
       choc_stem([0,-2.85,0],4.5);
     }
