@@ -58,7 +58,7 @@
   )
   (model "${KIPRJMOD}/3dmodels/iidx_keycap_teeny.wrl"
     (offset (xyz 0 0 2))
-    (scale (xyz 0.4 0.4 0.4))
-    (rotate (xyz 0 0 0))
+    (scale (xyz 0.36 0.4 0.4))
+    (rotate (xyz 0 0 90))
   )
 )
