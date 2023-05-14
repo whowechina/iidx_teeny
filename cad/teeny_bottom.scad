@@ -3,7 +3,7 @@ hinge_right=false;
 
 body();
 
-%color("green", 0.3) pcb();
+*%color("green", 0.2) pcb();
 
 module pcb() {
   translate([-137.32,144.4,5]) import("iidx_teeny v1.stl");
@@ -34,10 +34,10 @@ module body() {
     
     // TT wiring
     color("brown") translate([0,0,1]) {
-      translate([38,18]) rcube(54,12,10,2);
-      translate([-36,18]) rcube(56,12,10,2);
+      translate([36,18]) rcube(50,14,10,2);
+      translate([-34,18]) rcube(52,14,10,2);
 
-      translate([0,50]) rcube(42,10,10,2);
+      translate([0,47]) rcube(36,16,10,2);
       translate([14.5,54]) rcube(13,10,10,1);
       translate([-13,30]) rcube(10,32,10,1);
       translate([16,35]) rcube(10,32,10,1);
@@ -65,15 +65,22 @@ module body() {
     
     // TT hinge junction
     if (hinge_left) color("gray") {
-      translate([-65,20,1]) rcube(5,50,10,1);
-      translate([-75,20,3.2]) rcube(20,42,10,1);
-      translate([-62,20,1]) rcube(9,42,10,1);
-      wire_clamp([-75,19,3]);
+      translate([-75,20,2.5]) rcube(6,41,10,1);
+      difference() {
+        translate([-65,20,1]) rcube(16,41,10,0.1);
+        translate([-66,10,1]) rcube(4,8,10,1);
+        translate([-66,30,1]) rcube(4,8,10,1);
+      }
+      wire_clamp([-75,20,3]);
     }
     if (hinge_right) color("gray") {
-      translate([65,20,1]) rcube(5,50,10,1);
-      translate([75,20,3.2]) rcube(20,45,10,1);
-      wire_clamp([75,19,3]);
+      translate([75,20,2.5]) rcube(6,41,10,1);
+      difference() {
+        translate([65,20,1]) rcube(16,41,10,0.1);
+        translate([66,10,1]) rcube(4,8,10,1);
+        translate([66,30,1]) rcube(4,8,10,1);
+      }      
+      wire_clamp([75,20,3]);
     }
     
   }
@@ -81,16 +88,16 @@ module body() {
 
 module wire_clamp(pos) {
   translate(pos) rotate([0,-90,0]) hull($fn=64) {
-    translate([0,-2]) cylinder(d=4,h=20,center=true);
-    translate([0,2]) cylinder(d=4,h=20,center=true);
+    translate([0.6,-1.2]) cylinder(d=6,h=45,center=true);
+    translate([0.6,1.2]) cylinder(d=6,h=45,center=true);
   }
 }
 
 module screw(pos) {
   translate(pos) {
     cylinder(d=3.3,h=10,$fn=24);
-    cylinder(d=6.7,h=4,$fn=6);
-    cylinder(d=9.5,h=2,$fn=32);
+    cylinder(d=6.7,h=4.2,$fn=6);
+    cylinder(d=9.5,h=1.8,$fn=32);
   }
 }
 
