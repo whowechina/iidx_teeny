@@ -32,7 +32,7 @@ module mark(offset=[0,0,0],h=5.5,c="red") {
 module stems(v1=true,sla=true) {
   if (v1) {
     // choc v1
-    translate([0,0,1.8]) rotate([0,0,90]) color("cyan") {
+    translate([0,0,1.8]) rotate([0,0,0]) color("cyan") {
       choc_stem([0,2.85,0],4.5);
       choc_stem([0,-2.85,0],4.5);
     }

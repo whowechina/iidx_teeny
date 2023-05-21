@@ -6,18 +6,18 @@ difference() {
 }
 buttons();
 
-translate([63,47,2.3]) scale([0.3,0.3,0.3]) import("iidx_teeny_logo.stl");
+translate([63,49,2.3]) scale([0.3,0.3,0.3]) import("iidx_teeny_logo.stl");
 
-*%color("green", 0.2) pcb();
+%color("green", 0.2) pcb();
 
 module pcb() {
-  translate([-137.32,144.4,-1.21]) import("iidx_teeny v1.stl");
+  translate([-137.32,146.4,-1.21]) import("iidx_teeny_v1.stl");
 }
 
 module body() {
   difference() {
     union() {
-      color("silver") translate([0,25,0]) rcube(153,103,3,6.5);
+      color("silver") translate([0,27,0]) rcube(153,103,3,6.5);
     }
     // main button holes
     color("#2C3E50") {
@@ -25,40 +25,34 @@ module body() {
       main_hole([-18,0]);
       main_hole([18,0]);
       main_hole([54,0]);
-      main_hole([-36,36]);
-      main_hole([0,36]);
-      main_hole([36,36]);
+      main_hole([-36,38]);
+      main_hole([0,38]);
+      main_hole([36,38]);
     }
 
     // set button holes
     color ("darkgray") translate([0,0,-1]) {
-      aux_hole([43,64],1.5);
-      aux_hole([54,64],1.5);
-      aux_hole([-54,64]);
-      aux_hole([-32,64]);
-      aux_hole([-10,64]);
-      aux_hole([12,64]);
+      aux_hole([43,66],1.5);
+      aux_hole([54,66],1.5);
+      aux_hole([-54,66]);
+      aux_hole([-32,66]);
+      aux_hole([-10,66]);
+      aux_hole([12,66]);
     }
 
-    // pogo holes
-    translate([-48.92,121.5,0]) rotate([0,0,90]) pogo_hole();
-    translate([86.6,74.42,0]) rotate([0,0,0]) pogo_hole();
-    // usb hole
-    translate([-16.72,121.4]) usb_hole();
-
     // screws
-    screw([-70,-20]);
-    screw([-70,70]);
-    screw([70,-20]);
-    screw([70,70]);
+    screw([-70,-18]);
+    screw([-70,72]);
+    screw([70,-18]);
+    screw([70,72]);
   }
 }
 
 module leds() {
-  translate([-54,68]) cube([5,7,4.3],center=true);
-  translate([-32,68]) cube([5,7,4.3],center=true);
-  translate([-10,68]) cube([5,7,4.3],center=true);
-  translate([12,68]) cube([5,7,4.3],center=true);
+  translate([-54,70]) cube([5,7,4.3],center=true);
+  translate([-32,70]) cube([5,7,4.3],center=true);
+  translate([-10,70]) cube([5,7,4.3],center=true);
+  translate([12,70]) cube([5,7,4.3],center=true);
 }
 
 module screw(pos) {
@@ -81,17 +75,6 @@ module aux_hole(pos,r=2) {
     }
     //rcube(6,6,6,1.7);
   }
-}
-
-module pogo_hole()
-{
-  rotate([90,0,0]) resize([3,4.5,14]) cylinder(d=1,h=1,center=true,$fn=32);
-}
-
-module usb_hole()
-{
-  translate([4.3,0]) rotate([90,0,0]) resize([1.6,2,6]) cylinder(d=1,h=1,center=true,$fn=32);
-  translate([-4.3,0]) rotate([90,0,0]) resize([1.6,2,6]) cylinder(d=1,h=1,center=true,$fn=32);
 }
 
 module aux_button(pos) {
@@ -126,18 +109,18 @@ module buttons() {
     translate([-18,0]) teeny_button();
     translate([18,0]) teeny_button();
     translate([54,0]) teeny_button();
-    translate([-36,36]) teeny_button();
-    translate([0,36]) teeny_button();
-    translate([36,36]) teeny_button();
+    translate([-36,38]) teeny_button();
+    translate([0,38]) teeny_button();
+    translate([36,38]) teeny_button();
   }
 
   color("#2C3E50") translate([0,0,2.9]) {
-    aux_button([-54,65.5]);
-    aux_button([-32,65.5]);
-    aux_button([-10,65.5]);
-    aux_button([12,65.5]);
-    set_button([43,64]);
-    set_button([54,64]);
+    aux_button([-54,67.5]);
+    aux_button([-32,67.5]);
+    aux_button([-10,67.5]);
+    aux_button([12,67.5]);
+    set_button([43,66]);
+    set_button([54,66]);
   }
 }
 
