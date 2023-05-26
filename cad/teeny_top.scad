@@ -78,15 +78,9 @@ module aux_hole(pos,r=2) {
 }
 
 module aux_button(pos) {
-  translate(pos) {
-    difference() {
-      rcube(11,13.5,0.7,2);
-      translate([0,0,-1]) rcube(9.2,11.7,3,1.7);
-    }
-    difference() {
-      rcube(10.4,12.9,1.1,2);
-      translate([0,0,-1]) rcube(9.8,11.3,3,1.7);
-    }
+  translate(pos) difference() {
+    rcube(11,13.5,0.7,2);
+    translate([0,0,-1]) rcube(9,11.5,3,1.7);
   }
 }
 
@@ -94,11 +88,7 @@ module set_button(pos) {
   translate(pos) {
     difference() {
       rcube(10,10,0.6,2);
-      translate([0,0,-1]) rcube(8.2,8.2,3,1.7);
-    }
-    difference() {
-      rcube(9.4,9.4,1,2);
-      translate([0,0,-1]) rcube(8.8,8.8,3,1.7);
+      translate([0,0,-1]) rcube(8,8,3,1.7);
     }
   }
 }
