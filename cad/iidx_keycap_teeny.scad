@@ -2,7 +2,7 @@ w=20;
 h=28;
 r=1.2;
 solid=1.1;
-zoff=-1.6;
+zoff=-1.3;
 
 gap_r = 0.18; // radius of round corner in cross
 stem_l = 4.85; // socket stem length
