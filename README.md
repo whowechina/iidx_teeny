@@ -8,7 +8,7 @@ This is the a small brother of my previous Pico IIDX controller. Both Pico IIDX 
 <https://github.com/whowechina/iidx_pico>
 
 Here's me playing Konami's Beatmania IIDX ultimate mobile with it. Yes, I'm a cat lover.   
-<video src="https://github.com/whowechina/iidx_teeny/assets/11623830/12337fe1-61d6-4837-b52d-30b1b4818b8b" controls="controls" width="60%"></video>
+<video src="https://github.com/whowechina/iidx_teeny/assets/11623830/ac15311c-c6b2-48fc-b010-dc3178f6343e" controls="controls" width="60%"></video>
 
 Features:
 * It's thin, really really thin and foldable.
@@ -88,4 +88,4 @@ It's similar to my previous Pico IIDX project, just read the documentation there
 
 
 #### About the License
-It's CC-NC. So diy for yourself and for your friend, don't make money from it. If you want commercial use, contact me first.
+It's CC-NC. So diy for yourself and for your friend, don't make money from it. If you want commercial use, contact me.
