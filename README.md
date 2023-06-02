@@ -8,7 +8,7 @@ This is the a small brother of my previous Pico IIDX controller. Both Pico IIDX 
 <https://github.com/whowechina/iidx_pico>
 
 Here's me playing Konami's Beatmania IIDX ultimate mobile with it. Yes, I'm a cat lover.   
-<video src="https://github.com/whowechina/iidx_teeny/assets/11623830/ac15311c-c6b2-48fc-b010-dc3178f6343e" controls="controls" width="60%"></video>
+<video src="https://github.com/whowechina/iidx_teeny/assets/11623830/e5c332c0-fcec-4d57-9245-3d7d284a6dc8" controls="controls" width="60%"></video>
 
 Features:
 * It's thin, really really thin and foldable.
@@ -85,7 +85,6 @@ Again, print with 0.2mm layer, using 0.4mm nozzle, 5 walls. "Seam Position" shou
 ### Other Steps
 It's similar to my previous Pico IIDX project, just read the documentation there.
 <https://github.com/whowechina/iidx_pico>
-
 
 #### About the License
 It's CC-NC. So diy for yourself and for your friend, don't make money from it. If you want commercial use, contact me.
