@@ -7,8 +7,9 @@
 This is the a small brother of my previous Pico IIDX controller. Both Pico IIDX and this Teeny IIDX share the same firmware which is in Pico IIDX repo.
 <https://github.com/whowechina/iidx_pico>
 
-Here's me playing Konami's Beatmania IIDX ultimate mobile with it. Yes, I'm a cat lover.   
-<video src="https://github.com/whowechina/iidx_teeny/assets/11623830/e5c332c0-fcec-4d57-9245-3d7d284a6dc8" controls="controls" width="60%"></video>
+Here's me playing Konami's Beatmania IIDX ultimate mobile with it. Yes, I'm a cat lover.
+
+https://github.com/whowechina/iidx_teeny/assets/11623830/33a07bc2-4ae6-4204-b1cb-60a3e16e0516
 
 Features:
 * It's thin, really really thin and foldable.
