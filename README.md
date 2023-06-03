@@ -9,7 +9,7 @@ This is the a small brother of my previous Pico IIDX controller. Both Pico IIDX 
 
 Here's me playing Konami's Beatmania IIDX ultimate mobile with it. Yes, I'm a cat lover.
 
-https://github.com/whowechina/iidx_teeny/assets/11623830/33a07bc2-4ae6-4204-b1cb-60a3e16e0516
+https://github.com/whowechina/iidx_teeny/assets/11623830/5aea28e7-6961-4d22-b5de-0fad74cdeacf
 
 Features:
 * It's thin, really really thin and foldable.
