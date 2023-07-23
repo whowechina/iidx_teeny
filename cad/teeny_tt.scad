@@ -1,5 +1,5 @@
-export_tt = true;
-export_hinge = true;
+export_tt = true; // export main body
+export_hinge = true; // export the hinge cover
 
 h1=6; // base
 h2=14.5; // top
@@ -28,7 +28,8 @@ $fn=64;
 if (export_tt) body(); 
 if (export_hinge) {
   hinge_top();
-  translate([71,0,8.3]) rotate([0,0,-90]) scale([0.3,0.3,0.3]) import("teeny_only_logo.stl");
+  translate([71,0,8.6]) rotate([0,0,-90]) color("gray")
+    linear_extrude(height = 1) text("teeny", font="Bookman Old Style:style=Bold", size=6.5, valign="center", halign="center");
 }
 
 module hinge_top() {
