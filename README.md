@@ -21,16 +21,24 @@ Features:
 
 Thanks to many respectful guys/companies who made their tools or materials free or open source (KiCad, OpenSCAD, InkScape, Raspberry things).
 
-## Caution
-* Heavily relies on 3D printing.
-* Requires skills to solder tiny components and thin cables.
+## Notes
+This project heavily relies on 3D printing, and skills to solder tiny components and thin cables.
 
-Move forward only if you're REALLY interested.  
+Also, you can check out my other cool projects.
+
+* Popn Pico: https://github.com/whowechina/popn_pico  
+<img src="https://raw.githubusercontent.com/whowechina/popn_pico/main/doc/main.jpg" width="180px">
+
+
+* IIDX Pico: https://github.com/whowechina/iidx_pico  
+<img src="https://raw.githubusercontent.com/whowechina/iidx_pico/main/doc/main.jpg" width="250px">
+
+* Chu Pico: https://github.com/whowechina/chu_pico  
+<img src="https://raw.githubusercontent.com/whowechina/chu_pico/main/doc/main.jpg" width="250px">
+
 
 ## **Disclaimer** ##
-Due to my limited personal time, this document is still in progress. So stay tuned!  
-This project already has a working "release" but I haven't make it a real release yet. There will be updates to all components and firmware as I'm trying to make it better. It's not a commercial one, there's chance that I leave some mistakes there and may lead to your time or money loss. This open source project is provided as is, I can't promise anything.  
-Please don't hate me.
+I made this project in my personal time with no financial benefit or sponsorship. I will continue to improve the project. I have done my best to ensure that everything is accurate and functional, there's always a chance that mistakes may occur. I cannot be held responsible for any loss of your time or money that may result from using this open source project. Thank you for your understanding.
 
 ## HOW TO BUILD
 ### Turntable Materials
@@ -80,12 +88,24 @@ Again, print with 0.2mm layer, using 0.4mm nozzle, 5 walls. "Seam Position" shou
 * The disc (teeny_disc.stl), 60% fill, all fill patterns should be set to "Concentric".
 
 #### Button keycaps  
-* Print upside down, with easy-to-remove support materials.
+* Print upside down, with easy-to-remove support materials.  
   <img src="doc/keycap_fdm.jpg" width="300px">
 
 ### Other Steps
 It's similar to my previous Pico IIDX project, just read the documentation there.
 <https://github.com/whowechina/iidx_pico>
 
+But there're something you need to pay attention:
+* On Teeny's PCB, there are 2 sets of soldering pads, 1 set is for AS5600, the other is for the WS2812 LED ring.
+  * J1 is for LED, 5V is the power, L is LED signal, G is ground.
+  * J2 is for AS5600, 3V is the power (actually 3.3V), S is I2C SCL, D is I2C SDA, G is ground.
+  <img src="doc/j2_j3.png" width="300px">
+  * Please use two seperate cables to wire LED and AS5600, both (or at least one) should be shielded to prevent crosstalk interference.
+  * Choose thin/soft cables, so they can fit. Get ultra thin USB cable or extract daughter cables from abandoned HDMI cables. 2mm diameter is the best.
+  * Solder either U3 (level shifter, recommended) or R3 (around 10ohm, works most time), but NOT both.
+  * Don't solder R1, it was reserved for some experiments and I forgot to remove it.
+* There's a nice and overly complicated manual in IIDX Pico's repo, under doc folder. Follow the manual to set AS5600 to I2C mode and then do your LED ring setup.  
+<https://github.com/whowechina/iidx_pico/doc/Firmware_manual.pdf>
+
 #### About the License
-It's CC-NC. So diy for yourself and for your friend, don't make money from it. If you want commercial use, contact me.
+It's CC-NC. So diy for yourself and for your friend, don't make money from it.
