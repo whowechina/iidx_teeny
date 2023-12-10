@@ -105,8 +105,9 @@ But there're something you need to pay attention:
   * Choose thin/soft cables, so they can fit. Get ultra thin USB cable or extract daughter cables from abandoned HDMI cables. 2mm diameter is the best.
   * Solder either U3 (level shifter, recommended) or R3 (around 10ohm, works most time), but NOT both.
   * Don't solder R1, it was reserved for some experiments and I forgot to remove it.
-* There's a nice and overly complicated manual in IIDX Pico's repo, under doc folder. Follow the manual to set AS5600 to I2C mode and then do your LED ring setup.  
-<https://github.com/whowechina/iidx_pico/doc/Firmware_manual.pdf>
+* There's a nice manual in IIDX Pico's repo, under doc folder. Follow the manual to set AS5600 to I2C mode and then do your LED ring setup.  
+  <https://github.com/whowechina/iidx_pico/tree/main/doc/Firmware_manual.pdf>
+  <img src="doc/manual.gif" width="80%">
 
 #### About the License
 It's CC-NC. So diy for yourself and for your friend, don't make money from it.
