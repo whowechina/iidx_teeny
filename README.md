@@ -61,7 +61,7 @@ I made this project in my personal time with no financial benefit or sponsorship
 * 1x USB Type-C socket (918-418K2023S40001 or KH-TYPE-C-16P)
 * 18x WS2812B-3528 RGB LEDs to light up the keys.
 * 2x SN74LV1T34DBVR (SOT-23-5) level shifters.
-* 1x 0603 5.1kohm resistors for USB.
+* 2x 0603 5.1kohm resistors for USB.
 * 5x 0805 1uF capacitors.
 * 4x M3*6mm screws and hex nuts to fix parts together.
 
