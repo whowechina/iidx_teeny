@@ -3,7 +3,7 @@ hinge_right=false;
 
 body();
 
-%color("green", 0.2) pcb();
+//%color("green", 0.2) pcb();
 
 module pcb() {
   translate([-137.32,146.4,5]) import("iidx_teeny_v1.stl");
@@ -53,8 +53,9 @@ module body() {
     }
 
     // usb
-    color("cyan") translate([0,0,6.7]) {
-      translate([1,80,0]) rotate([90,0,0]) rcube(9.5,10,20,1);
+    translate([0,0,6.7]) {
+      color("blue") translate([1,77.1,0]) rotate([90,0,0]) rcube(9.5,10,18,1);
+      color("red") translate([1,86,-3]) rotate([90,0,0]) rcube(8.6,2.7,10,1.3);      
     }
   
     // screws
