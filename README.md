@@ -19,7 +19,10 @@ Features:
 * All source files open.
 * It's easier and more portable than IIDX Pico.
 
-Thanks to many respectful guys/companies who made their tools or materials free or open source (KiCad, OpenSCAD, InkScape, Raspberry things).
+Thanks to many respectful guys/companies who made their tools or materials free or open source (KiCad, OpenSCAD, InkScape, Raspberry things). And also:
+* RP_Silicon_KiCad: https://github.com/HeadBoffin/RP_Silicon_KiCad
+* Switch_Keyboard_Kailh: https://github.com/kiswitch/keyswitch-kicad-library
+* Type-C: https://github.com/ai03-2725/Type-C.pretty
 
 ## Notes
 This project heavily relies on 3D printing, and skills to solder tiny components and thin cables.
