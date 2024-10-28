@@ -73,9 +73,10 @@ https://discord.gg/M8f2PPQFEA
   https://www3.panasonic.biz/ac/e/dl/catalog/index.jsp?series_cd=3473&part_no=EVQP1K05M
 * 1x USB Type-C socket (918-418K2023S40001 or KH-TYPE-C-16P)
 * 18x WS2812B-3528 RGB LEDs to light up the keys.
-* 2x SN74LV1T34DBVR (SOT-23-5) level shifters.
-* 2x 0603 5.1kohm resistors for USB.
-* 5x 0805 1uF capacitors.
+* 2x 0603 5.1kohm resistors for USB, (R20, R21).
+* 2x 0603 0~20ohm resistors for light signals (R1, R2).
+* 2x 0603 1-10kohm resistors for I2C pullup (R3, R4).
+* 5x 0805 or 0603, 0.1 to 1uF capacitors.
 * 4x M3*6mm screws and hex nuts to fix parts together.
 
 ### Connection for Foldable
@@ -116,9 +117,8 @@ But there're something you need to pay attention:
   <img src="doc/j2_j3.png" width="300px">
   * Please use two seperate cables to wire LED and AS5600, both (or at least one) should be shielded to prevent crosstalk interference.
   * Choose thin/soft cables, so they can fit. Get ultra thin USB cable or extract daughter cables from abandoned HDMI cables. 2mm diameter is the best.
-  * Solder either U3 (level shifter, recommended) or R3 (around 10ohm, works most time), but NOT both.
-  * Don't solder R1, it was reserved for some experiments and I forgot to remove it.
-* There's a nice manual in IIDX Pico's repo, under doc folder. Follow the manual to set AS5600 to I2C mode and then do your LED ring setup.  
+  * R3, R4 are optional, if turntable (I2C) is not working properly, you may try use them.
+  * There's a nice manual in IIDX Pico's repo, under doc folder. Follow the manual to set AS5600 to I2C mode and then do your LED ring setup.  
   <https://github.com/whowechina/iidx_pico/tree/main/doc/Firmware_manual.pdf>
   <img src="doc/manual.gif" width="80%">
 
