@@ -4,11 +4,15 @@
 <img src="doc/folded_1.jpg" width="40%">
 <img src="doc/folded_2.jpg" width="40%">
 
+# IMPORTANT NOTE
+I've merged this IIDX Teeny repo into the Pico IIDX repo and I'll no longer update this repo. Please go to Pico IIDX repo for the latest updates and guides.
+https://github.com/whowechina/iidx_pico
+
 This is the a small brother of my previous Pico IIDX controller. Both Pico IIDX and this Teeny IIDX share the same firmware which is in Pico IIDX repo.
 <https://github.com/whowechina/iidx_pico>
 
-Here's me playing Konami's Beatmania IIDX ultimate mobile with it. Yes, I'm a cat lover.
 
+Here's me playing Konami's Beatmania IIDX ultimate mobile with it. Yes, I'm a cat lover.
 https://github.com/whowechina/iidx_teeny/assets/11623830/5aea28e7-6961-4d22-b5de-0fad74cdeacf
 
 Features:
