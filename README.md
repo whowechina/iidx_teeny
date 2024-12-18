@@ -5,8 +5,10 @@
 <img src="doc/folded_2.jpg" width="40%">
 
 # IMPORTANT NOTE
-I've merged this IIDX Teeny repo into the Pico IIDX repo and I'll no longer update this repo. Please go to Pico IIDX repo for the latest updates and guides.
+After a major refactor, I've merged this "IIDX Teeny" repository into the "IIDX Pico" repository and will no longer update this repository. Please refer to the "IIDX Pico" repository for guides and the latest updates.
+
 https://github.com/whowechina/iidx_pico
+
 
 This is the a small brother of my previous Pico IIDX controller. Both Pico IIDX and this Teeny IIDX share the same firmware which is in Pico IIDX repo.
 <https://github.com/whowechina/iidx_pico>
